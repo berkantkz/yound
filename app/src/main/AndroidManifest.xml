@@ -14,7 +14,6 @@
                 <data android:mimeType="text/*"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
