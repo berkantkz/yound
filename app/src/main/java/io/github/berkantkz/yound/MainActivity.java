@@ -7,9 +7,7 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity {
 
-    static String baseURL = "https://youtubemp3api.com/@api/button/mp3/";
-    static String fullURL;
-    String receivedText;
+    static String baseURL = "https://youtubemp3api.com/@api/button/mp3/", fullURL, receivedText;
     Intent receivedIntent;
 
     @Override
