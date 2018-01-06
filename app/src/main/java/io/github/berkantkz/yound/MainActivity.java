@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -32,7 +33,7 @@ public class MainActivity extends Activity {
         fullURL = baseURL + receivedText.replace("https://","").replace("http://","").replace("youtu.be/","").replace("youtube.com/watch?v=","").replace("m.watch?v=","");
         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(fullURL));
         startActivity(i);
-
+        Toast.makeText(this, "berkantkz", Toast.LENGTH_SHORT).show();
         mInterstitialAd.setAdListener(new AdListener() {
             public void onAdLoaded() {
                 mInterstitialAd.show();
