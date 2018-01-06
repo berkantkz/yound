@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 
         receivedIntent = getIntent();
         receivedText = receivedIntent.getStringExtra(Intent.EXTRA_TEXT);
-        fullURL = baseURL + receivedText.replace("https://","").replace("http://","").replace("youtu.be/","").replace("youtube.com/","");
+        fullURL = baseURL + receivedText.replace("https://","").replace("http://","").replace("youtu.be/","").replace("youtube.com/watch?v=","").replace("m.watch?v=","");
         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(fullURL));
         startActivity(i);
 
