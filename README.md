@@ -12,9 +12,9 @@ And that's all. You'll be redirected to download page. Choose which quality you 
 
 -----
 #### Note:
-You should add your own ```keystore.properties``` file to be able to build a signed apk. This file should contain required definitions as ```(do not add quotes except storeFile)```:
+You should add your own ```keystore.properties``` file to be able to build a signed apk. This file should contain required definitions as ```(do not add quotes)```:
 
->* *storePassword=yourPasswordWithoutQuotes*
->* *keyPassword=PasswordAgainWithoutQuotes*
->* *keyAlias=yourAliasWithoutQuotes*
->* *storeFile="pathToTheStoredKeyFile"*
+>* *storePassword="yourPasswordWithoutQuotes"*
+>* *keyPassword="PasswordAgainWithoutQuotes"*
+>* *keyAlias="yourAliasWithoutQuotes"*
+>* *storeFile="pathToKeystoreWithoutQuotes"*
