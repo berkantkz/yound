@@ -15,6 +15,10 @@ body {
     background-attachment: fixed;
 }
 
+* {
+	font-family: 'Titillium Web';
+}
+
 *:focus {
 	outline:0;
 }
@@ -56,6 +60,7 @@ body {
 	background: #ffffffa9;
     margin: 0 1% 2% 0;
 	transition: all 0.3s;
+	font-size: 11pt;
 }
 
 #input:focus {
@@ -74,6 +79,7 @@ body {
 	background: #ffffffa9;
 	cursor: pointer;
 	transition: all 0.3s;
+	font-size: 11pt;
 }
 
 #generate:hover {
