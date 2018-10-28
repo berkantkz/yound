@@ -1,0 +1,54 @@
+<html>
+	<head>	
+		<title>Download mp3 from YouTube | berkantkz</title>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="https://berkantkz.github.io/kz.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="yound.css" rel="stylesheet" />
+		<!-- <link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet"> -->
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		function getSrc() {
+			var input = document.getElementById('input');
+			
+			if (input.value == "" | input.value.length < 11) {
+				alert('Input field is either empty or id doesn\'t match with id of any video.');
+			} else {
+				var id = input.value.replace("https://","").replace("http://","").replace("www.","").replace("youtube.com/","").replace("youtu.be/","").replace("watch?v=","").replace("","");
+				var iframe = document.getElementById('iframe');
+				iframe.src = 'http://www.convertmp3.io/widget/button/?video=https://www.youtube.com/watch?v=' + id;
+				/*
+				iframe.onload = function() {
+					console.log(document.getElementById("iframe").contentWindow.document.getElementById("percentageText").value);
+				};
+				*/
+			}
+		}
+		
+		function keyUp(t){
+			if (t.value.match(/\s/g)) {
+				t.value=t.value.replace(/\s/g,'');
+			}
+		}
+		</script>
+		<div id="shadow"></div>
+		<div id="content">
+			<div id="logo">
+				<img src="https://raw.githubusercontent.com/berkantkz/yound/android/app/src/main/res/mipmap-xxxhdpi/yound.png" draggable="false"/> 
+				<div>
+					<h1>Yound</h1>
+					<h4>by berkantkz</h4>
+				</div>
+			</div>
+			<input id="input" placeholder="Paste video URI or ID here." onkeyup="keyUp(this)"/>
+			<button id="generate" onclick="getSrc()">Generate</button><br>
+			<iframe id="iframe" width="250px" height="60px" scrolling="no" style="border:none;" src=""></iframe><br>
+			<img id="kzLogo" src="https://berkantkz.github.io/kz_t.png" height="64" width="64" draggable="false"/>
+		</div>
+	</body>
+</html>
