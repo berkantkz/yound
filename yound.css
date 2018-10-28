@@ -86,6 +86,20 @@ body {
 	background: #fff;
 }
 
+#info {
+    color: #ffffff4a;
+    text-decoration: none;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+	text-align: left;
+    font-style: italic;
+}
+
+#info a {
+	color: #ffffff4a;
+}
+
 #kzLogo {
 	margin-top: 5%;
 }
