@@ -119,8 +119,6 @@ ins {
 footer {
 	height: 20vh;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
     display: flex;
     flex: 1 0 21%;
     align-items: flex-end;
