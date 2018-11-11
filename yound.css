@@ -19,11 +19,13 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
 	position: relative;
+	transition: all 0.3s;
 }
 
 body > * {
     flex: 1 0 auto;
     text-align: center;
+	transition: all 0.3s;
 }
 
 * {
@@ -50,7 +52,11 @@ body > * {
     /* position: absolute;
     top: 40%; */
     text-align: center;
-    padding: 7% 0;
+}
+
+ins {
+    align-self: flex-start;
+    margin: 2%;
 }
 
 #logo > img {
