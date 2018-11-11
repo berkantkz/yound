@@ -1,4 +1,9 @@
-body, html {
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
@@ -6,13 +11,19 @@ body, html {
 	min-height: 578px;
 	min-width: 418px;
 	user-select: none;
-}
-
-body {
 	background: url(https://picsum.photos/1280/720/?random);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+	position: relative;
+}
+
+body > * {
+    flex: 1 0 auto;
+    text-align: center;
 }
 
 * {
@@ -35,20 +46,33 @@ body {
 
 #content {
 	width: 100%;
-    position: absolute;
-    top: 40%;
+	height: 70vh;
+    /* position: absolute;
+    top: 40%; */
     text-align: center;
+    padding: 7% 0;
 }
 
-#logo {
-    margin: -10% 0 2% 0;
-    border-radius: 5%;
+#logo > img {
+	border-radius: 6px;
 }
 
 #logo h1, h4 {
-	margin: 5px;
+	/* margin: 5px; */
 	color: #fff;
 	font-weight: normal;
+}
+
+#logo h1 {
+    font-size: 40pt;
+    margin: 0;
+}
+
+#logo h4 {
+    margin-top: -15px;
+    margin-bottom: 3%;
+	font-style: italic;
+	opacity: 0.6;
 }
 
 #input {
@@ -86,20 +110,73 @@ body {
 	background: #fff;
 }
 
+footer {
+	height: 20vh;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    display: flex;
+    flex: 1 0 21%;
+    align-items: flex-end;
+}
+
+footer > * {
+    flex: 1 0 auto;
+    text-align: center;
+	margin: 1%;
+}
+
 #info {
-    color: #ffffff4a;
+    color: #fff;
     text-decoration: none;
-    position: absolute;
+    /* position: absolute;
     left: 2%;
-    bottom: 2%;
-	text-align: left;
+    bottom: 5%; */
+	padding: 1% 2%;
     font-style: italic;
+	opacity: 0.2;
+	border-radius: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+	transition: all 0.3s;
+}
+
+#info:hover {
+	background: #fff3;
+	opacity: 1;
+	transition: all 0.3s;
 }
 
 #info a {
-	color: #ffffff4a;
+	color: aquamarine;
 }
 
-#kzLogo {
-	margin-top: 5%;
+#kzlogo {
+	/*position: absolute;
+	left: 50%;
+	bottom: 5%;
+    transform: translateX(-50%); */
+	color: #ffffff4a;
+	padding: 1%;
+	transition: all 0.3s;
+	height: 50%;
+}
+
+#source {
+	text-decoration: none;
+	color: #fff;
+	padding: 1% 2%;
+	border-radius: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: auto;
+	opacity: 0.2;
+	transition: all 0.3s;
+}
+
+#source:hover {
+	opacity: 1;
+	background: #fff3;
+	transition: all 0.3s;
 }
